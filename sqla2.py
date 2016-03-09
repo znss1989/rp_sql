@@ -10,10 +10,11 @@ conn = sqlite3.connect("cars.db")
 cursor = conn.cursor()
 
 # Create table inventory
-cursor.execute("""CREATE TABLE inventory
-    (Make TEXT,
+cursor.executescript("""DROP TABLE IF EXISTS inventory;
+    CREATE TABLE inventory
+    (Manufacturer TEXT,
      Model TEXT,
-     Quantity, INT)""")
+     Quantity INT);""")
 
-# Close database connectioni
+# Close database connection
 conn.close()
