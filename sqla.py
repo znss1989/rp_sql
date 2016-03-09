@@ -10,7 +10,7 @@ conn = sqlite3.connect("new.db")
 cursor = conn.cursor()
 
 # Create a table
-cursor.execute("""CREATE TABLE populatation
+cursor.execute("""CREATE TABLE population
     (city TEXT, state TEXT, population INT)""")
 
 # Close the database connection
